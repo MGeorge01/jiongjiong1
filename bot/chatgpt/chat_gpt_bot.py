@@ -255,7 +255,7 @@ class ChatGPTBot(Bot, OpenAIImage):
                         if set(t) == set(sheet_two.cell(j,1).value):
                             solution += sheet_two.cell(j, 2).value
             if index!=0:
-                answer_prompt = sheet_one.cell(index,2).value+str(titles)+'。'+sheet_one.cell(index,3).value+user_question+'？'+sheet_one.cell(index,4).value+solution+"请你按照参考要点，分段落有条理并且简明地回答客户的问题，"
+                answer_prompt = sheet_one.cell(index,2).value+str(titles)+'。'+sheet_one.cell(index,3).value+user_question+'？'+sheet_one.cell(index,4).value+solution+"请你总结参考要点，分段落有条理地回答我的问题，"
             strategy.close()
             if solution == '':
                 if len(titles)>0:
