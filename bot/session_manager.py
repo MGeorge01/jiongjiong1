@@ -7,6 +7,8 @@ class Session(object):
     def __init__(self, session_id, system_prompt=None):
         self.session_id = session_id
         self.messages = []
+        self.natal = dict()
+        self.natal_titles = ''
         if system_prompt is None:
             self.system_prompt = conf().get("character_desc", "")
         else:
